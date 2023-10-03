@@ -1,0 +1,14 @@
+<h1 [ngClass]="'title'">{{ title }}</h1>
+
+<form>
+  <input type="text" [(ngModel)]="firstName" name="name" /><br />
+  <input type="text" name="firstname" [(ngModel)]="lastName" /><br />
+
+  <button (click)="userRegister()">Register</button>
+</form>
+
+<br />
+
+<p *ngIf="registed">
+  {{ message }} with name of {{ firstName }} {{ lastName }}
+</p>
