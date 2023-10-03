@@ -9,6 +9,26 @@
 
 <br />
 
-<p *ngIf="registed">
+<p *ngIf="registed; else sinRegistrar">
   {{ message }} with name of {{ firstName }} {{ lastName }}
 </p>
+
+<ng-template #sinRegistrar>
+  <p>Nobody registed</p>
+</ng-template>
+
+<div>
+  <ul>
+    <li
+      [ngStyle]="{
+        color: 'blue',
+        'font-weight': 'bold',
+        'font-size': '1.6rem'
+      }"
+      *ngFor="let ticket of tickets; let i = index">
+      {{ ticket.title }} .<span>ticket {{ i }}</span>
+    </li>
+  </ul>
+</div>
+
+<!-- . ticket {{i}} -->

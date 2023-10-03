@@ -1,5 +1,8 @@
 import { Component } from '@angular/core';
 
+interface Ticket {
+  title: string;
+}
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
@@ -12,6 +15,13 @@ export class AppComponent {
   firstName!: string;
   lastName!: string;
 
+  tickets: Ticket[] = [
+    { title: 'Python' },
+    { title: 'java' },
+    { title: 'JavaScript' },
+    { title: 'Angular' },
+    { title: 'Vue' },
+  ];
   userRegister() {
     this.registed = true;
     this.message = 'User registration';
