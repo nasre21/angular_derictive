@@ -14,6 +14,7 @@ export class AppComponent {
   registed: boolean = false;
   firstName!: string;
   lastName!: string;
+  post!: string;
 
   tickets: Ticket[] = [
     { title: 'Python' },

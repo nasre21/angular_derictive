@@ -41,3 +41,10 @@ p {
   font-family: 'Courier New', Courier, monospace;
   margin-top: 1rem;
 }
+
+.forCondition {
+text-decoration: underline;
+font-weight: bold;
+color: red;
+
+}

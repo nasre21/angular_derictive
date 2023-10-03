@@ -3,6 +3,7 @@
 <form>
   <input type="text" [(ngModel)]="firstName" name="name" /><br />
   <input type="text" name="firstname" [(ngModel)]="lastName" /><br />
+  <input type="text" name="firstname" [(ngModel)]="post" /><br />
 
   <button (click)="userRegister()">Register</button>
 </form>
@@ -10,9 +11,12 @@
 <br />
 
 <p *ngIf="registed; else sinRegistrar">
-  {{ message }} with name of {{ firstName }} {{ lastName }}
+  {{ message }} with name of {{ firstName }} {{ lastName }} and has a Post of <span [ngClass]="{forCondition:post==='directores'}">{{ post }}. </span>
 </p>
 
+
+<!-- ngStyle -->
+<!--  <span [ngStyle]="{color: post==='director'? 'red':'blue'}">{{ post }} </span> -->
 <ng-template #sinRegistrar>
   <p>Nobody registed</p>
 </ng-template>
